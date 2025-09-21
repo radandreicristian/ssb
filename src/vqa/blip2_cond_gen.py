@@ -89,7 +89,7 @@ class Blip2VqaWithScoring:
             with torch.no_grad():
                 output = self.model.generate(
                     **inputs,
-                    max_new_tokens=30,
+                    max_new_tokens=1,
                 )
 
             generated_text = self.processor.batch_decode(output, skip_special_tokens=True)[0].strip()
